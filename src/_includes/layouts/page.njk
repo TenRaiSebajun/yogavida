@@ -6,14 +6,17 @@ layout: layouts/base.njk
 {% if hero_image %}
 <section class="page-hero">
   <div class="page-hero__bg">
-    <img src="{{ hero_image }}" alt="{{ hero_image_alt }}" loading="eager">
+    <img data-editable="image" data-prop-src="hero_image" data-prop-alt="hero_image_alt"
+         src="{{ hero_image }}" alt="{{ hero_image_alt }}" loading="eager">
   </div>
   <div class="page-hero__overlay"></div>
   <div class="page-hero__content">
-    <h1 class="page-hero__title">{{ hero_title }}</h1>
-    {% if hero_subtitle %}<p class="page-hero__subtitle">{{ hero_subtitle }}</p>{% endif %}
+    <h1 class="page-hero__title" data-editable="text" data-prop="hero_title" data-type="span">{{ hero_title }}</h1>
+    {% if hero_subtitle %}<p class="page-hero__subtitle" data-editable="text" data-prop="hero_subtitle" data-type="span">{{ hero_subtitle }}</p>{% endif %}
   </div>
 </section>
 {% endif %}
 
+<editable-text data-prop="@content" data-type="block">
 {{ content | safe }}
+</editable-text>

@@ -13,11 +13,11 @@ permalink: "/testimonials/"
 <!-- TESTIMONIALS GRID -->
 <section class="section section--cream">
   <div class="container">
-    <div class="grid grid--3">
+    <div class="grid grid--3" data-editable="array" data-prop="testimonials">
       {% for item in testimonials %}
       <div class="testimonial-card reveal reveal--delay-{{ (loop.index0 % 4) + 1 }}">
-        <p class="testimonial-card__text">&ldquo;{{ item.text }}&rdquo;</p>
-        <p class="testimonial-card__author">&mdash; {{ item.author }}</p>
+        <p class="testimonial-card__text" data-editable="text" data-prop="text">&ldquo;{{ item.text }}&rdquo;</p>
+        <p class="testimonial-card__author" data-editable="text" data-prop="author">&mdash; {{ item.author }}</p>
       </div>
       {% endfor %}
     </div>
