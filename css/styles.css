@@ -2129,3 +2129,160 @@ blockquote cite {
     columns: 1;
   }
 }
+
+
+/* ============================================================
+   RETREAT CARDS (retreats hub page)
+   ============================================================ */
+.retreat-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--color-cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--duration-base) var(--ease-out);
+  text-decoration: none;
+  color: inherit;
+}
+
+.retreat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+
+.retreat-card__image {
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.retreat-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.retreat-card:hover .retreat-card__image img {
+  transform: scale(1.04);
+}
+
+.retreat-card__body {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.retreat-card__badge {
+  display: inline-block;
+  width: fit-content;
+  font-size: var(--size-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-sage-deep);
+  padding: 0.3em 0.9em;
+  border-radius: 2em;
+  margin-bottom: var(--space-md);
+}
+
+.retreat-card__badge--muted {
+  background: var(--color-sand);
+  color: var(--color-walnut);
+}
+
+.retreat-card__title {
+  font-family: var(--font-display);
+  font-size: var(--size-2xl);
+  color: var(--color-espresso);
+  margin-bottom: var(--space-xs);
+}
+
+.retreat-card__subtitle {
+  font-family: var(--font-display);
+  font-size: var(--size-lg);
+  font-style: italic;
+  color: var(--color-clay);
+  margin-bottom: var(--space-sm);
+}
+
+.retreat-card__dates {
+  font-size: var(--size-sm);
+  font-weight: 500;
+  color: var(--color-walnut);
+  margin-bottom: var(--space-md);
+}
+
+.retreat-card__text {
+  color: var(--color-walnut);
+  font-size: var(--size-sm);
+  line-height: 1.8;
+}
+
+.retreat-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-sand);
+}
+
+.retreat-card__price {
+  font-family: var(--font-display);
+  font-size: var(--size-xl);
+  font-weight: 500;
+  color: var(--color-espresso);
+}
+
+.retreat-card__cta {
+  font-size: var(--size-sm);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-clay);
+  transition: gap var(--duration-base) var(--ease-out);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+.retreat-card:hover .retreat-card__cta {
+  gap: 0.7em;
+}
+
+/* Coming-soon variant */
+.retreat-card--coming-soon {
+  grid-template-columns: 1fr;
+  opacity: 0.85;
+}
+
+.retreat-card--coming-soon:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.retreat-card__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  min-height: 220px;
+  background: var(--color-sand);
+  color: var(--color-walnut);
+  font-size: var(--size-sm);
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .retreat-card {
+    grid-template-columns: 1fr;
+  }
+
+  .retreat-card__image {
+    min-height: 240px;
+  }
+}
