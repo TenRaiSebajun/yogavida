@@ -1,0 +1,92 @@
+# CloudCannon configuration for Yoga Vida Wellness
+# https://cloudcannon.com/documentation/articles/setting-global-configuration/
+
+source: src
+
+collections_config:
+  pages:
+    path: pages
+    url: "/[slug]/"
+    output: true
+    icon: wysiwyg
+    _enabled_editors:
+      - visual
+      - content
+      - data
+    add_options:
+      - name: Add New Page
+        schema: default
+    schemas:
+      default:
+        path: .cloudcannon/schemas/page.md
+    _inputs:
+      title:
+        type: text
+        label: Page Title
+      description:
+        type: textarea
+        label: Meta Description
+      hero_image:
+        type: image
+        label: Hero Image
+        comment: Full-width banner image at the top of the page
+      hero_image_alt:
+        type: text
+        label: Hero Image Alt Text
+      hero_title:
+        type: text
+        label: Hero Heading
+      hero_subtitle:
+        type: text
+        label: Hero Subtitle
+      layout:
+        type: select
+        options:
+          values:
+            - layouts/page.njk
+            - layouts/home.njk
+            - layouts/base.njk
+            - layouts/retreat.njk
+      permalink:
+        type: text
+        label: URL Path
+
+data_config:
+  testimonials:
+    path: _data/testimonials.yml
+    _inputs:
+      text:
+        type: textarea
+        label: Testimonial Quote
+      author:
+        type: text
+        label: Author Name
+  site:
+    path: _data/site.yml
+    _inputs:
+      name:
+        type: text
+        label: Site Name
+      tagline:
+        type: text
+        label: Tagline
+      email:
+        type: email
+        label: Email Address
+      phone:
+        type: text
+        label: Phone Number
+      address:
+        type: textarea
+        label: Address
+
+_editables:
+  content:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    heading: h2, h3, h4
+    blockquote: true
+    image: true

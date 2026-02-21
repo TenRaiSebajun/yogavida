@@ -1,0 +1,68 @@
+<nav class="nav{% if nav_transparent %} nav--transparent{% endif %}" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="/" class="nav__logo">
+      <span class="nav__logo-text">Yoga Vida</span>
+    </a>
+
+    <div class="nav__links">
+      <a href="/" class="nav__link">Home</a>
+
+      <div class="nav__dropdown">
+        <a href="/about/" class="nav__link nav__dropdown-toggle">
+          About
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="nav__dropdown-menu">
+          <a href="/about/" class="nav__dropdown-link">Yoga Philosophy</a>
+          <a href="/about/#shannel" class="nav__dropdown-link">About Shannel</a>
+        </div>
+      </div>
+
+      <div class="nav__dropdown">
+        <a href="/classes/" class="nav__link nav__dropdown-toggle">
+          Services
+          <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 4.5L6 7.5L9 4.5"/></svg>
+        </a>
+        <div class="nav__dropdown-menu">
+          <a href="/classes/" class="nav__dropdown-link">Group Classes</a>
+          <a href="/private-sessions/" class="nav__dropdown-link">Private Sessions</a>
+          <a href="/meditation/" class="nav__dropdown-link">Meditation</a>
+          <a href="/healing/" class="nav__dropdown-link">Healing</a>
+          <a href="/childrens-yoga/" class="nav__dropdown-link">Children's Yoga</a>
+        </div>
+      </div>
+
+      <a href="/retreats/" class="nav__link">Retreats</a>
+      <a href="/testimonials/" class="nav__link">Testimonials</a>
+      <a href="/shop/" class="nav__link">Shop</a>
+      <a href="/contact/" class="nav__link">Contact</a>
+    </div>
+
+    <a href="/bookings/" class="btn btn--primary btn--sm nav__cta">Book Now</a>
+
+    <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div class="nav__mobile" aria-hidden="true">
+  <a href="/" class="nav__mobile-link">Home</a>
+  <a href="/about/" class="nav__mobile-link">About</a>
+  <div class="nav__mobile-divider"></div>
+  <a href="/classes/" class="nav__mobile-link">Group Classes</a>
+  <a href="/private-sessions/" class="nav__mobile-link">Private Sessions</a>
+  <a href="/meditation/" class="nav__mobile-link">Meditation</a>
+  <a href="/healing/" class="nav__mobile-link">Healing</a>
+  <a href="/childrens-yoga/" class="nav__mobile-link">Children's Yoga</a>
+  <div class="nav__mobile-divider"></div>
+  <a href="/retreats/" class="nav__mobile-link">Retreats</a>
+  <a href="/testimonials/" class="nav__mobile-link">Testimonials</a>
+  <a href="/shop/" class="nav__mobile-link">Shop</a>
+  <a href="/contact/" class="nav__mobile-link">Contact</a>
+  <div class="nav__mobile-divider"></div>
+  <a href="/bookings/" class="btn btn--primary mt-lg">Book Now</a>
+</div>

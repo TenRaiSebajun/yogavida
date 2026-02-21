@@ -1,6 +1,0 @@
-# Redirects for old WordPress slugs to new paths
-/home    /    301
-/group-classes   /classes.html   301
-/private-classes   /private-sessions.html   301
-/contact-me   /contact.html   301
-/terms-and-conditions   /terms.html   301
