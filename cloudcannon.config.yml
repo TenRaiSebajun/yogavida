@@ -13,12 +13,6 @@ collections_config:
       - visual
       - content
       - data
-    add_options:
-      - name: Add New Page
-        schema: default
-    schemas:
-      default:
-        path: .cloudcannon/schemas/page.md
     _inputs:
       title:
         type: text
