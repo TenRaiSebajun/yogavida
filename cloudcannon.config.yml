@@ -84,3 +84,16 @@ _editables:
     heading: h2, h3, h4
     blockquote: true
     image: true
+  text:
+    bold: true
+    italic: true
+    link: true
+  block:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+    heading: h2, h3, h4
+    blockquote: true
+    image: true

@@ -10,7 +10,7 @@
 | **Block content (full WYSIWYG)** | Add `data-type="block"` |
 | **Image (from front matter)** | `data-editable="image" data-prop-src="key" data-prop-alt="key"` |
 | **Body content (markdown)** | `<editable-text data-prop="@content" data-type="block">{{ content \| safe }}</editable-text>` |
-| **Source text (hardcoded)** | `data-editable="source" data-path="/src/pages/file.njk" data-key="uniqueKey"` |
+| **Source text (hardcoded)** | `data-editable="source" data-path="/pages/file.njk" data-key="uniqueKey"` |
 | **Array container** | `data-editable="array" data-prop="arrayKey"` |
 | **Array item fields** | Nested `data-editable="text" data-prop="fieldName"` |
 
@@ -38,7 +38,7 @@ Use `<editable-text>` web component when you can't add attributes to the element
 For text written directly in a template (not from front matter):
 
 ```html
-<h2 data-editable="source" data-path="/src/pages/index.njk" data-key="services_title">
+<h2 data-editable="source" data-path="/pages/index.njk" data-key="services_title">
   Nourish the Mind, Body &amp; Soul
 </h2>
 ```
