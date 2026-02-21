@@ -1,0 +1,10 @@
+# Clean URL redirects
+/home    /    301
+/about   /about.html   200
+/group-classes   /classes.html   301
+/private-classes   /private-sessions.html   301
+/bookings   /bookings.html   200
+/contact-me   /contact.html   301
+/shop   /shop.html   200
+/privacy   /privacy.html   200
+/terms-and-conditions   /terms.html   301
